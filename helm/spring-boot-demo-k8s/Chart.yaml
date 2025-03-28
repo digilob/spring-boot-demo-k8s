@@ -1,0 +1,6 @@
+apiVersion: v2
+name: spring-boot-demo-k8s
+description: A Helm chart for deploying the Spring Boot Demo application
+type: application
+version: 0.1.0
+appVersion: "0.0.1-SNAPSHOT"
