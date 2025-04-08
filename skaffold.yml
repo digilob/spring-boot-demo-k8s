@@ -1,0 +1,21 @@
+apiVersion: skaffold/v4
+kind: Config
+metadata:
+  name: spring-boot-demo-k8s
+build:
+  artifacts:
+    - image: spring-boot-demo-k8s
+      context: .
+      docker:
+        dockerfile: Dockerfile
+deploy:
+  helm:
+    releases:
+      - name: spring-boot-demo-k8s
+        chartPath: helm/spring-boot-demo-k8s
+        valuesFiles:
+          - helm/spring-boot-demo-k8s/values.yaml
+        setValues:
+          image.repository: spring-boot-demo-k8s
+          image.tag: latest
+        namespace: default
