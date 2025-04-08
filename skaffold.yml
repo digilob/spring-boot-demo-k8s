@@ -14,7 +14,7 @@ deploy:
       - name: spring-boot-demo-k8s
         chartPath: helm/spring-boot-demo-k8s
         valuesFiles:
-          - helm/spring-boot-demo-k8s/values.yaml
+          - helm/spring-boot-demo-k8s/dev-values.yaml
         setValues:
           image.repository: spring-boot-demo-k8s
           image.tag: latest

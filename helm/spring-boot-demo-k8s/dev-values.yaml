@@ -1,0 +1,7 @@
+replicaCount: 3
+
+
+ingress:
+  hosts:
+    - host: example.local.dev
+
